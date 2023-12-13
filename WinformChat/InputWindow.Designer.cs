@@ -1,4 +1,4 @@
-﻿namespace WinFormsChat
+﻿namespace WinformsChat
 {
     partial class InputWindow 
     {
@@ -52,9 +52,9 @@
             RegistrationBtn.UseVisualStyleBackColor = true;
             RegistrationBtn.Click += RegistrationBtn_Click;
             // 
-            // Registration
-            // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+     
+
+           AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(RegistrationBtn);

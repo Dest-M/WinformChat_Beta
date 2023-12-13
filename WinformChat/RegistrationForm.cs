@@ -1,24 +1,28 @@
-﻿using WinFormsApp4.Models;
-using WinFormsApp4.Repositories;
+﻿
+using WinformChat;
+using WinformsChat.Models;
+using WinformsChat.Repositories;
 
-namespace WinFormsApp4
+namespace WinformsChat
 {
     public partial class RegistrationForm : Form
     {
         private readonly IUserRepository _userRepository;
 
-        private readonly MainWindow _mainWindow;
-        public RegistrationForm(MainWindow mainWindow, IUserRepository userRepository)
+        private readonly Chat _chat;
+        public RegistrationForm(Chat chat, IUserRepository userRepository)
         {
             InitializeComponent();
             _userRepository = userRepository;
-            _mainWindow = mainWindow;
+            _chat = chat;
         }
 
-        private void RegistrationBtn_Click(object sender, EventArgs e)
+
+
+        private void RegisterBtn_Click(object sender, EventArgs e)
         {
-            var login = LoginTextBox.Text;
-            var password = PasswordTextBox.Text;
+            var login = Usernmtxt.Text; 
+            var password = psswrdtxt.Text;
 
             if (string.IsNullOrWhiteSpace(login) || string.IsNullOrWhiteSpace(password))
             {
@@ -28,9 +32,8 @@ namespace WinFormsApp4
 
             _userRepository.Create(new User() { Login = login, Password = password });
 
-            _mainWindow.Show();
+            _chat.Show();
             this.Hide();
-
         }
     }
 }
