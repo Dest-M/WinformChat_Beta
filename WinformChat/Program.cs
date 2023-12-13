@@ -2,6 +2,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using WinformsChat.Repositories;
 using WinformsChat;
+using WinformChat;
 
 namespace WinformsChat
 {
@@ -29,11 +30,11 @@ namespace WinformsChat
             return Host.CreateDefaultBuilder()
                 .ConfigureServices((context, services) => {
                     services.AddTransient<IUserRepository, UserRepository>(provider => new UserRepository(connectionString));
-                    services.AddTransient<IShopRepository, ShopRepository>(provider => new ShopRepository(connectionString));
+
                     services.AddTransient<InputWindow>();
                     services.AddTransient<RegistrationForm>();
                     services.AddTransient<AuthorizeForm>();
-                    services.AddTransient<MainWindow>();
+                    services.AddTransient<Chat>();
                 });
         }
     }

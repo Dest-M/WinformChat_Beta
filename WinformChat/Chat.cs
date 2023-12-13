@@ -12,7 +12,7 @@ namespace WinformChat
 {
     public partial class Chat : Form
     {
-        string targetId;
+        string? targetId;
         ChooseRecipientcs _chrecipients = new ChooseRecipientcs();
         public Chat()
         {
@@ -40,6 +40,28 @@ namespace WinformChat
             TargetUser.Text = _chrecipients.targetName;
             targetId = _chrecipients.targetId;
             TextingBox.Text = "Recipient Changed!";
+        }
+
+        private void TextingBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UpdateTextingBox(string message)
+        {
+            TextingBox.Text += "\n" + message;
+        }
+
+        private void SendText_Click(object sender, EventArgs e)
+        {
+            string text = TextBox.Text;
+                            ///////                     !!!! SEND TO SERVER
+            UpdateTextingBox("You"+text+"\n");
+          
+        }
+        public void RecieveText(string message)         //!!!!
+        {
+            UpdateTextingBox(message+"\n");
         }
     }
 }

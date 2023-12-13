@@ -43,6 +43,7 @@
             TextingBox.Name = "TextingBox";
             TextingBox.Size = new Size(676, 284);
             TextingBox.TabIndex = 0;
+            TextingBox.Click += TextingBox_Click;
             // 
             // TargetUser
             // 
@@ -72,6 +73,7 @@
             SendText.TabIndex = 3;
             SendText.Text = "Send";
             SendText.UseVisualStyleBackColor = true;
+            SendText.Click += SendText_Click;
             // 
             // TextBox
             // 
