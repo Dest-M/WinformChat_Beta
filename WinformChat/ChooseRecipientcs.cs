@@ -23,12 +23,7 @@ namespace WinformChat
         private void UserSelectBtn_Click(object sender, EventArgs e)
         {
             targetName = OnlineUsersList.CheckedItems.ToString();
-            targetId = "";                                              //// SELECT WITH SERVER
-
-        }
-
-        private void OnlineUsersList_SelectedIndexChanged(object sender, EventArgs e)
-        {
+            targetId = "";
 
         }
     }

@@ -39,7 +39,6 @@
             OnlineUsersList.Name = "OnlineUsersList";
             OnlineUsersList.Size = new Size(233, 346);
             OnlineUsersList.TabIndex = 0;
-            OnlineUsersList.SelectedIndexChanged += OnlineUsersList_SelectedIndexChanged;
             // 
             // UserSelectBtn
             // 
